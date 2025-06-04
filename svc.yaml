@@ -1,0 +1,39 @@
+service:
+  name: test-service-1
+  identifier: svcmultihs1
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: m1
+            type: K8sManifest
+            spec:
+              store:
+                type: Harness
+                spec:
+                  files:
+                    - /manifest files/deployment.yaml
+                    - /manifest files/namespace.yaml
+                    - /manifest files/service.yaml
+              valuesPaths:
+                - /manifest files/values.yaml
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: dockerconnector
+                imagePath: harness/todolist
+                tag: <+input>
+                digest: ""
+              identifier: Primary
+              type: DockerRegistry
+      deploymentVerification:
+        healthSources:
+          - /hs/src1.yaml
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: CV_Sanity
