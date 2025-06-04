@@ -1,5 +1,5 @@
 pipeline:
-  name: Release-check
+  name: goldman-cfd-test
   identifier: Releasecheck
   projectIdentifier: CV_Sanity
   orgIdentifier: default
