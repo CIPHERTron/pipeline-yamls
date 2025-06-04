@@ -37,7 +37,7 @@ pipeline:
                   timeout: 2h
                   spec:
                     isMultiServicesOrEnvs: false
-                    type: Canary
+                    type: Auto
                     monitoredService:
                       type: Default
                       spec: {}
