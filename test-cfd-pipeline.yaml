@@ -1,6 +1,6 @@
 pipeline:
-  name: test-cfd-cds-118084
-  identifier: testcfdcds118084
+  name: test-cfd-pipeline
+  identifier: testcfdpipeline
   projectIdentifier: TestingShubhendu
   orgIdentifier: default
   tags: {}
