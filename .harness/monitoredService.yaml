@@ -1,0 +1,13 @@
+monitoredService:
+  orgIdentifier: default
+  projectIdentifier: CV_Sanity
+  identifier: demosvc_demoenv
+  name: demosvc_demoenv
+  type: Application
+  description: ""
+  serviceRef: demosvc
+  environmentRef: demoenv
+  environmentRefList:
+  - demoenv
+  sources: {}
+  enabled: false
