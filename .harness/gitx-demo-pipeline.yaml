@@ -13,12 +13,12 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: remotesvcffon
+            serviceRef: demosvc
           environment:
-            environmentRef: remoteenvffon
+            environmentRef: demoenv
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: remoteinfraffon
+              - identifier: demoinfra
           execution:
             steps:
               - step:
